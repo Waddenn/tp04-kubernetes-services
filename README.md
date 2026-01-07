@@ -1,7 +1,5 @@
 # Rendu TP 04 : Services & DaemonSet
 
-Ce document recense les commandes et fichiers utilisés pour réaliser le TP 04.
-
 ## 1. Déploiement Impératif (CLI)
 
 ### Commandes manuelles
