@@ -16,6 +16,9 @@ kubectl create deployment worker --image=dockercoins/worker:v0.1
 ### Challenge : Script de déploiement
 Le fichier `deploy_app_coins.sh` automatise cette tâche.
 
+![Déploiement Impératif](demo_imperative.gif)
+
+
 ### Exposition des services internes
 Sans ces services, les composants ne peuvent pas communiquer entre eux (le worker ne trouve pas rng/hasher/redis).
 ```bash
@@ -35,8 +38,13 @@ kubectl expose deploy/webui --type=NodePort --port=80
 
 Le fichier `app-coins.yaml` regroupe l'ensemble de l'application (Deployments + Services).
 
+![Déploiement Déclaratif](demo_declarative.gif)
+
+
 ---
 
 ## 3. DaemonSet (RNG)
 
 Le fichier `rng.yaml` convertit le déploiement `rng` en DaemonSet pour assurer une instance par noeud.
+
+![RNG DaemonSet](demo_daemonset.gif)
